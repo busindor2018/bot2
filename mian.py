@@ -2,7 +2,7 @@ import telebot, cfg
 import buttons as btn
 import openai
 
-openai.api_key = 'sk-proj-V3XzWTs0fzUJshN4S71rT3BlbkFJ1fZ42pWTxjaF3aLLpf5A'
+openai.api_key = ''
 bot = telebot.TeleBot(cfg.TOKEN)
 
 @bot.message_handler(commands=['start'])
@@ -11,7 +11,7 @@ def start(message):
 
 @bot.message_handler(commands=['help'])
 def help(message):
-    bot.send_message(message.chat.id, "Личный многофункциональный бот Ильи Александровича версия 0.1.4", reply_markup=btn.func_btn)
+    bot.send_message(message.chat.id, "", reply_markup=btn.func_btn)
 
 @bot.message_handler(func=lambda message: True)
 def func(message):
