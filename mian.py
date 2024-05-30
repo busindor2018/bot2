@@ -2,7 +2,7 @@ import telebot, cfg
 import buttons as btn
 import openai
 
-openai.api_key = ''
+openai.api_key = 'sk-proj-Nx4WqXxvYTOzpujxjOIOT3BlbkFJbZapKvPp2wq4bRAF53AJ'
 bot = telebot.TeleBot(cfg.TOKEN)
 
 @bot.message_handler(commands=['start'])
@@ -11,7 +11,7 @@ def start(message):
 
 @bot.message_handler(commands=['help'])
 def help(message):
-    bot.send_message(message.chat.id, "", reply_markup=btn.func_btn)
+    bot.send_message(message.chat.id, "version 0.2.1", reply_markup=btn.func_btn)
 
 @bot.message_handler(func=lambda message: True)
 def func(message):
