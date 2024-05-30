@@ -2,7 +2,7 @@ import telebot, cfg
 import buttons as btn
 import openai
 
-openai.api_key = 'sk-proj-Nx4WqXxvYTOzpujxjOIOT3BlbkFJbZapKvPp2wq4bRAF53AJ'
+openai.api_key = ''
 bot = telebot.TeleBot(cfg.TOKEN)
 
 @bot.message_handler(commands=['start'])
